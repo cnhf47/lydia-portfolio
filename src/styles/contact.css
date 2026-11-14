@@ -1,0 +1,60 @@
+/* Contact page styling */
+
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+.contact-page {
+  min-height: 65vh;
+  padding-top: 80px;
+}
+
+.contact-page p {
+  max-width: 650px;
+  color: #cbd5e1;
+}
+
+.contact-page .intro-label {
+  color: #7dd3fc;
+}
+
+/* Email and Phone */
+
+.contact-section {
+  margin-top: 35px;
+}
+
+.contact-section h3 {
+  color: #7dd3fc;
+  margin-bottom: 8px;
+}
+
+.contact-section p {
+  color: #ffffff;
+  font-size: 18px;
+  user-select: text;
+  overflow-wrap: anywhere;
+}
+
+/* LinkedIn and GitHub */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.contact-links a {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #1e293b;
+  color: #7dd3fc;
+  text-decoration: none;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+.contact-links a:hover {
+  background-color: #334155;
+}

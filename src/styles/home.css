@@ -1,0 +1,567 @@
+/* =====================================================
+   HOMEPAGE — gamer-inspired profile + launcher library
+   These selectors are scoped to the homepage where possible.
+   ===================================================== */
+
+/* ---- Classic RPG dialogue for the greeting ---- */
+
+.home-page .rpg-dialogue {
+  position: relative;
+  margin: 24px 0 25px;
+  padding: 30px 24px 17px;
+  border: 3px solid #7dd3fc;
+  border-radius: 8px;
+  background: linear-gradient(155deg, #182b45, #142035);
+  box-shadow: 0 0 0 3px #0c1422, inset 0 0 0 2px #324a62, 0 12px 30px rgba(0, 0, 0, .2);
+}
+
+.home-page .rpg-dialogue-name {
+  position: absolute;
+  top: -15px;
+  left: 19px;
+  padding: 4px 13px;
+  border: 2px solid #7dd3fc;
+  border-radius: 5px;
+  background: #101827;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.home-page .hero .rpg-dialogue h1 {
+  min-height: 1.12em;
+  margin: 0 0 11px;
+  color: #ffffff;
+  font-size: clamp(30px, 4.3vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -.6px;
+}
+
+.home-page .rpg-typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #7dd3fc;
+  animation: rpg-cursor-blink .75s steps(1, end) infinite;
+}
+
+@keyframes rpg-cursor-blink {
+  50% { opacity: 0; }
+}
+
+.home-page .rpg-dialogue-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+  min-height: 21px;
+  color: #a9c7de;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.home-page .rpg-skip-button {
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #7dd3fc;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: .2px;
+  padding: 3px 5px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-page .rpg-skip-button:hover { color: #ffffff; }
+.home-page .rpg-skip-button:focus-visible { outline: 2px solid #7dd3fc; outline-offset: 3px; }
+
+.home-page .achievement-emblem .achievement-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* ---- Introduction / hero ---- */
+
+.home-page .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(310px, 0.8fr);
+  align-items: center;
+  gap: clamp(28px, 4.5vw, 64px);
+  min-height: min(78vh, 760px);
+  padding: 72px 0 76px;
+}
+
+.home-page .hero-content { min-width: 0; }
+
+.home-page .hero .intro-label { letter-spacing: 1.8px; }
+
+.home-page .hero h1 {
+  color: #ffffff;
+  font-size: clamp(42px, 5.8vw, 72px);
+  line-height: 1.08;
+  margin: 14px 0 18px;
+}
+
+.home-page .hero h2 {
+  color: #7dd3fc;
+  font-size: clamp(25px, 3.1vw, 36px);
+  line-height: 1.3;
+  max-width: 650px;
+  margin: 0 0 20px;
+}
+
+.home-page .hero-description {
+  max-width: 610px;
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.home-page .hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.home-page .hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  min-height: 48px;
+  font: inherit;
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.home-page .hero-buttons .button-primary {
+  background: #7dd3fc;
+  border-color: #7dd3fc;
+  color: #101827;
+}
+
+.home-page .hero-buttons .button-primary:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+}
+
+.home-page .hero-buttons .button-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: #64748b;
+}
+
+.home-page .hero-buttons .button-secondary:hover {
+  background: #27374d;
+  border-color: #94a3b8;
+}
+
+/* ---- Small achievement / player-profile panel ---- */
+
+.home-page .hero-achievements {
+  position: relative;
+  min-width: 0;
+  padding: 27px;
+  border-radius: 18px;
+  border: 1px solid #3a506b;
+  background: linear-gradient(150deg, #23364c 0%, #1b293b 54%, #182234 100%);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, .2);
+}
+
+.home-page .hero-achievements::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 22px;
+  right: 22px;
+  height: 2px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, transparent, #7dd3fc, transparent);
+}
+
+.home-page .hero-achievements-header,
+.home-page .library-header,
+.home-page .project-card-metadata {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.home-page .hero-achievements-kicker,
+.home-page .hero-achievements-footer {
+  font-size: 11px;
+  font-weight: 800;
+  color: #7dd3fc;
+  letter-spacing: 2px;
+}
+
+.home-page .hero-achievements-decor { color: #fbbf24; font-size: 14px; letter-spacing: 3px; }
+
+.home-page .hero-achievements h3 {
+  color: #ffffff;
+  font-size: clamp(23px, 2.6vw, 29px);
+  margin: 14px 0 6px;
+}
+
+.home-page .hero-achievements-intro {
+  color: #b7c9dc;
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+
+.home-page .achievement-list { display: grid; gap: 10px; }
+
+.home-page .achievement-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 13px 12px;
+  border: 1px solid #344860;
+  border-radius: 11px;
+  background: rgba(15, 23, 42, .55);
+  transition: border-color .2s ease, background .2s ease;
+}
+
+.home-page .achievement-row:hover {
+  border-color: #7dd3fc;
+  background: #1d3449;
+}
+
+.home-page .achievement-emblem {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #56738b;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #294a60, #24364b);
+  color: #a9e7ff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.home-page .achievement-copy h4 {
+  margin: 1px 0 4px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.home-page .achievement-copy p {
+  margin: 0;
+  font-size: 13px;
+  color: #bdcce0;
+  line-height: 1.55;
+}
+
+.home-page .hero-achievements-footer {
+  margin: 19px 0 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* ---- Featured library heading ---- */
+
+.home-page #projects { padding: 8px 0 95px; scroll-margin-top: 28px; }
+
+.home-page .library-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: 20px;
+  row-gap: 8px;
+}
+
+.home-page .library-heading {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.home-page .library-header h2 {
+  margin: 10px 0;
+  color: #fff;
+  font-size: clamp(28px, 3.3vw, 40px);
+  letter-spacing: -.4px;
+}
+
+.home-page .library-subtitle {
+  grid-column: 1 / -1;
+  color: #b9cada;
+  line-height: 1.7;
+  max-width: none;
+  margin: 0;
+}
+
+.home-page .library-count {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  flex-shrink: 0;
+  color: #b7c9dc;
+  border: 1px solid #334155;
+  background: #1e293b;
+  border-radius: 999px;
+  padding: 8px 13px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+
+/* ---- Game-launcher-inspired project cards ---- */
+
+.home-page .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+
+.home-page .project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: linear-gradient(180deg, #1e2d41, #1b293a);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, .13);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.home-page .project-card:hover,
+.home-page .project-card:focus-within {
+  transform: translateY(-4px);
+  border-color: #7dd3fc;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, .24);
+}
+
+.home-page .project-card-media {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.home-page .project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.home-page .project-card:hover .project-image { transform: scale(1.035); }
+
+.home-page .project-image-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  min-height: 65px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 28px 20px 14px;
+  background: linear-gradient(transparent, rgba(7, 15, 28, .88));
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+
+
+.home-page .project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 23px;
+  min-width: 0;
+}
+
+.home-page .project-card-metadata {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px 10px;
+}
+
+.home-page .project-genre {
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+.home-page .project-stage {
+  padding: 6px 9px;
+  color: #cdd9e5;
+  background: #2b4054;
+  border: 1px solid #445970;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+
+.home-page .project-content h3 {
+  font-size: clamp(21px, 2.3vw, 26px);
+  line-height: 1.3;
+  margin: 18px 0 4px;
+}
+
+.home-page .project-title-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.home-page .project-title-link:hover { color: #7dd3fc; }
+
+.home-page .project-type {
+  margin: 4px 0 0;
+  color: #93b7cb;
+  font-size: 12px;
+}
+
+.home-page .project-description {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 16px 0 0;
+}
+
+/* Shared project and other pages still use these tag classes. */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.skill-tag {
+  background-color: #334155;
+  color: #e2e8f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.home-page .project-card-tags { margin-top: 20px; margin-bottom: 20px; }
+.home-page .project-card-tags .skill-tag { color: #c5d8e8; background: #293e52; border: 1px solid #38536b; }
+
+/* CTA is a Link styled like a game-launcher button.
+   It opens the project showcase, not an executable game. */
+.home-page .view-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 52px;
+  margin-top: auto;
+  padding: 13px 18px;
+  border: 1px solid #7dd3fc;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+  color: #0b1727;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .15px;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, .12);
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.home-page .view-project:hover {
+  background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
+  color: #0b1727;
+  box-shadow: 0 10px 24px rgba(56, 189, 248, .22);
+  transform: translateY(-2px);
+}
+
+.home-page .view-project:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.home-page .project-launch-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.home-page .project-launch-label { flex: 0 1 auto; }
+
+.home-page .project-launch-note {
+  margin: 9px 0 0;
+  color: #94a3b8;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.45;
+}
+
+/* ---- Responsive home layout ---- */
+
+@media (max-width: 940px) {
+  .home-page .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(290px, .9fr);
+    gap: 26px;
+    min-height: auto;
+  }
+
+  .home-page .hero-achievements { padding: 20px; }
+}
+
+@media (max-width: 780px) {
+  .home-page .hero { grid-template-columns: 1fr; padding: 52px 0 54px; }
+  .home-page .hero-achievements { max-width: 560px; }
+  .home-page .project-grid { grid-template-columns: 1fr; }
+  .home-page .library-header { align-items: start; }
+}
+
+@media (max-width: 540px) {
+  .home-page .hero { padding: 40px 0 48px; }
+  .home-page .hero .rpg-dialogue h1 { font-size: clamp(29px, 8vw, 41px); }
+  .home-page .rpg-dialogue { padding: 29px 18px 15px; }
+  .home-page .hero h2 { font-size: 25px; }
+  .home-page .hero-description { font-size: 15px; }
+  .home-page .hero-achievements { padding: 18px; }
+  /* Stack the counter below the description on smaller screens. */
+  .home-page .library-header { grid-template-columns: 1fr; align-items: start; }
+  .home-page .library-heading { grid-column: 1; grid-row: 1; }
+  .home-page .library-subtitle { grid-column: 1; grid-row: 2; }
+  .home-page .library-count { grid-column: 1; grid-row: 3; justify-self: start; }
+  .home-page .project-content { padding: 18px; }
+  .home-page .project-card-media { aspect-ratio: 16 / 10; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .project-card,
+  .home-page .project-image,
+  .home-page .achievement-row,
+  .home-page .hero-buttons a,
+  .home-page .view-project { transition: none; }
+  .home-page .project-card:hover,
+  .home-page .project-card:focus-within,
+  .home-page .project-card:hover .project-image,
+  .home-page .view-project:hover,
+  .home-page .hero-buttons .button-primary:hover { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .rpg-typing-cursor { animation: none; }
+}

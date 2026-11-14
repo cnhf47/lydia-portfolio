@@ -1,0 +1,111 @@
+/* Site-wide and FYP mobile/reduced-motion rules */
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablets */
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 60px 0;
+    min-height: auto;
+  }
+
+  .hero-highlight {
+    padding: 24px;
+  }
+}
+
+/* Mobile Phones */
+
+@media (max-width: 700px) {
+  .project-grid,
+  .qa-grid,
+  .skills-grid,
+  .visitor-model-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .site-header nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .site-header .nav-links {
+    gap: 18px;
+  }
+
+  .qa-card {
+    padding: 18px;
+  }
+
+  /* Carousel on Mobile */
+
+  .carousel-arrow {
+    width: 36px;
+    height: 55px;
+    font-size: 36px;
+  }
+
+  .carousel-caption {
+    padding: 15px 18px 20px;
+  }
+
+  /* Visitor Models on Mobile */
+
+  .visitor-model-card img {
+    height: 250px;
+  }
+
+  /* Footer on Mobile */
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .hero-buttons a,
+  .hero-buttons button,
+  .carousel-arrow,
+  .carousel-dot {
+    transition: none;
+  }
+
+  .project-card:hover,
+  .hero-buttons .button-primary:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .pcg-biome-section .generated-map-grid,
+  .project-skill-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .pcg-stats-grid { gap: 8px; }
+  .pcg-stats-grid > div { padding: 15px 7px; }
+  .pcg-challenge-card { padding: 18px; }
+  .pcg-research-box,
+  .pcg-tech-note { padding: 18px; }
+}
+
+@media (max-width: 640px) {
+  .pcg-blocked-comparison {
+    grid-template-columns: 1fr;
+  }
+}

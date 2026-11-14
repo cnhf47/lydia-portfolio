@@ -1,0 +1,129 @@
+/* Shared theme, typography, navigation, footer and focus styles */
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+body {
+  background-color: #101827;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #7dd3fc;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.intro-label {
+  color: #7dd3fc;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
+.site-header {
+  background-color: #1e293b;
+  padding: 20px;
+}
+
+.site-header nav {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: #7dd3fc;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.site-header .nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: #7dd3fc;
+  font-weight: bold;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+  border-top: 1px solid #334155;
+  padding: 30px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.site-footer p {
+  color: #94a3b8;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   KEYBOARD ACCESSIBILITY
+   ======================================== */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 3px;
+}

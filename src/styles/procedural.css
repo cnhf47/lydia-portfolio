@@ -1,0 +1,514 @@
+/* Procedural Generation FYP: maps, diagrams and testing evidence */
+
+/* ========================================
+   PROCEDURAL MAP GENERATION SAMPLES
+   ======================================== */
+
+.generated-map-section {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.generated-map-section h2 {
+  color: #7dd3fc;
+  margin-bottom: 10px;
+}
+
+/* Algorithm label */
+
+.generated-map-algorithm {
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Screenshot */
+
+.generated-map-link {
+  display: block;
+  width: 100%;
+}
+
+.generated-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+  border: 1px solid #334155;
+
+  background-color: #0f172a;
+  image-rendering: pixelated;
+
+  cursor: zoom-in;
+  transition: border-color 0.2s ease;
+}
+
+.generated-map-link:hover .generated-map-image {
+  border-color: #7dd3fc;
+}
+
+/* Explanation */
+
+.generated-map-description {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 20px;
+
+  width: 100%;
+  max-width: none;
+  text-align: left;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .generated-map-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .generated-map-description {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .generated-map-image {
+    transition: none;
+  }
+}
+
+/* ========================================
+   PROCEDURAL GENERATION COMPARISON
+   ======================================== */
+
+/* Two images side by side */
+
+.generated-map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+/* Individual image cards */
+
+.generated-map-card {
+  margin: 0;
+  min-width: 0;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.generated-map-card a {
+  display: block;
+}
+
+.generated-map-card .generated-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  image-rendering: pixelated;
+}
+
+.generated-map-card figcaption {
+  padding: 14px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.generated-map-card:hover {
+  border-color: #7dd3fc;
+}
+
+/* Testing overview image */
+
+.generation-evaluation-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  cursor: zoom-in;
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+  .generated-map-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* Video limitation note */
+
+.video-note {
+  background-color: #1e293b;
+  border-left: 3px solid #7dd3fc;
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin-top: 20px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.video-note strong {
+  color: #7dd3fc;
+}
+
+/* Procedural FYP-specific styles */
+
+.pcg-research-box,
+.pcg-tech-note {
+  margin-top: 22px;
+  padding: 22px 24px;
+  border: 1px solid #334155;
+  border-left: 3px solid #7dd3fc;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #cbd5e1;
+}
+
+.pcg-research-box h3,
+.pcg-tech-note h3 {
+  color: #7dd3fc;
+  margin: 0 0 12px;
+}
+
+.pcg-research-box p:last-child,
+.pcg-tech-note p:last-child {
+  margin-bottom: 0;
+}
+
+.pcg-muted {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.pcg-biome-section {
+  margin: 34px 0 44px;
+}
+
+.pcg-biome-section h3 {
+  color: #7dd3fc;
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+
+.pcg-biome-section .generated-map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.pcg-biome-section .generated-map-card {
+  margin: 0;
+  min-width: 0;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pcg-biome-section .generated-map-card a {
+  display: block;
+}
+
+.pcg-biome-section .generated-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  image-rendering: pixelated;
+  cursor: zoom-in;
+}
+
+.pcg-biome-section .generated-map-card figcaption {
+  color: #cbd5e1;
+  text-align: center;
+  padding: 13px 10px;
+  font-size: 0.9rem;
+}
+
+.pcg-biome-section .generated-map-description {
+  width: 100%;
+  max-width: none;
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+
+.pcg-biome-section .generated-map-algorithm {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.pcg-figure {
+  margin: 22px 0;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1e293b;
+}
+
+.pcg-figure-narrow {
+  max-width: 760px;
+}
+
+.pcg-figure a {
+  display: block;
+  background: #0f172a;
+}
+
+.pcg-figure img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  cursor: zoom-in;
+}
+
+.pcg-figure figcaption {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.91rem;
+  padding: 12px 16px;
+}
+
+.pcg-pipeline {
+  padding: 0;
+  margin: 24px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 21px;
+  counter-reset: pipeline;
+}
+
+.pcg-pipeline li {
+  counter-increment: pipeline;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 16px 18px 16px 58px;
+  border-radius: 10px;
+}
+
+.pcg-pipeline li::before {
+  content: counter(pipeline);
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #334155;
+  color: #7dd3fc;
+  font-weight: 700;
+}
+
+.pcg-pipeline li:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  top: 100%;
+  left: 28px;
+  color: #7dd3fc;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 22px;
+}
+
+.pcg-pipeline li strong {
+  color: #e2e8f0;
+}
+
+.pcg-tech-note code {
+  background: #0f172a;
+  color: #bae6fd;
+  border-radius: 4px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.pcg-challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pcg-challenge-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.pcg-challenge-card h3 {
+  color: #7dd3fc;
+  margin: 0 0 16px;
+}
+
+.pcg-challenge-card p {
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.pcg-challenge-card p:last-child {
+  margin-bottom: 0;
+}
+
+.pcg-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.pcg-stats-grid > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 12px;
+  text-align: center;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #1e293b;
+}
+
+.pcg-stats-grid strong {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #7dd3fc;
+}
+
+.pcg-stats-grid span {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.pcg-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.pcg-results-table {
+  width: 100%;
+  min-width: 420px;
+  border-collapse: collapse;
+  color: #e2e8f0;
+}
+
+.pcg-results-table th,
+.pcg-results-table td {
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid #334155;
+}
+
+.pcg-results-table thead th {
+  background: #1e293b;
+  color: #7dd3fc;
+}
+
+.pcg-results-table tbody tr:nth-child(even) {
+  background: rgba(30, 41, 59, 0.45);
+}
+
+.pcg-subheading {
+  color: #7dd3fc;
+  margin: 26px 0 18px;
+}
+
+/* Original in-game and tile-layer screenshots, shown separately */
+.pcg-blocked-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.pcg-blocked-comparison .pcg-figure {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pcg-blocked-comparison .pcg-figure a {
+  min-height: 220px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.pcg-blocked-comparison .pcg-figure img {
+  width: auto;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.pcg-blocked-comparison .pcg-figure figcaption {
+  border-top: 1px solid #334155;
+}
+
+
+/* Unofficial student project notice and third-party asset credits */
+.pcg-disclaimer {
+  margin-top: 28px;
+  padding: 22px 24px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-left: 3px solid #7dd3fc;
+  border-radius: 10px;
+}
+
+.pcg-disclaimer h3 {
+  color: #7dd3fc;
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.pcg-disclaimer p {
+  color: #cbd5e1;
+  line-height: 1.75;
+  margin: 0 0 14px;
+}
+
+.pcg-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .pcg-disclaimer {
+    padding: 18px;
+  }
+}
